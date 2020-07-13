@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200711134741_InitMigration.cs" />
+    <Compile Remove="Migrations\20200711134741_InitMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200712185952_InitMigration.cs" />
+    <Compile Remove="Migrations\20200712185952_InitMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200712195553_InitMigration.cs" />
+    <Compile Remove="Migrations\20200712195553_InitMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200712205358_InitMigration.cs" />
+    <Compile Remove="Migrations\20200712205358_InitMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200712221110_InitMigration.cs" />
+    <Compile Remove="Migrations\20200712221110_InitMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200712221852_InitMigration.cs" />
+    <Compile Remove="Migrations\20200712221852_InitMigration.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

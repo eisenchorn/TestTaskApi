@@ -1,0 +1,119 @@
+### Создание компании со всеми внутренностями
+POST http://localhost:1113/companies
+Content-Type: application/json
+
+{
+    "name": "google",
+    "payers": [
+        {
+        "id": "010d4e08-e8bc-4a00-b9bb-29fc2c839373",
+        "name": "qwerty"
+        },
+        {
+        "id": "8c3812cf-4df8-411e-a7e7-52d5395d97cd",
+        "name": "joasdzxcsh"
+        }
+    ],
+    "country": {
+        "code": "US",
+        "name": "United States of America (the)"
+    },
+    "companyContactInfo": {
+        "email": "google@yandex.com",
+        "phone": "9999999"
+    },
+    "managers": [
+        {
+        "id": "9bc4fd9d-6853-4d17-8e7e-62e9eb084b62",
+        "name": "qwe"
+        },
+        {
+        "id": "a10a4306-b15b-464b-bc80-c59317d4e410",
+        "name": "zxc"
+        }
+    ]
+}
+### Создание компании только с именем, страной и контактными данными
+POST http://localhost:1113/companies
+Content-Type: application/json
+
+{
+    "name": "рамблер",
+    "country": {
+        "code": "RU"
+    },
+    "companyContactInfo": {
+        "email": "rambler@rambler.com",
+        "phone": "9999999"
+    }
+}
+### Создание компании только с именем и страной
+POST http://localhost:1113/companies
+Content-Type: application/json
+
+{
+    "name": "румблер",
+    "country": {
+        "code": "RU"
+    },
+    "companyContactInfo": {
+        "email": "rambler@rambler.com",
+        "phone": "9999999"
+    }
+}
+### Получение списка компаний
+GET http://localhost:1113/companies
+### Получаение только одной компании
+GET http://localhost:1113/companies/4b33d291-f2a5-432c-9e29-be109669ffdf
+### Удаление компании
+DELETE http://localhost:1113/companies/f76c8aa7-178b-4651-b7b5-9282aa238a5a
+### Изменение данных компании
+PUT http://localhost:1113/companies
+Content-Type: application/json
+
+{
+    "id": "5c93302c-21f2-4feb-ab8f-cb55cbfd68d5",
+    "name": "google1",
+    "country": {
+      "code": "RU"
+    },
+    "companyContactInfo": {
+      "email": "google@google.ru",
+      "phone": "8800"
+    }
+}
+### Добавление менеджера в компанию
+POST http://localhost:1113/companies/5c93302c-21f2-4feb-ab8f-cb55cbfd68d5/managers/3ba1c28f-459a-47fa-9559-fa3030de586a
+### Удаление менеджера из компании
+DELETE http://localhost:1113/companies/5c93302c-21f2-4feb-ab8f-cb55cbfd68d5/managers/3ba1c28f-459a-47fa-9559-fa3030de586a
+### Добавление плательщика компании
+POST http://localhost:1113/companies/5c93302c-21f2-4feb-ab8f-cb55cbfd68d5/payers
+Content-Type: application/json
+
+{
+    "name": "鈴木"
+}
+### Удаление плательщика из компании
+DELETE http://localhost:1113/companies/5c93302c-21f2-4feb-ab8f-cb55cbfd68d5/payers/010d4e08-e8bc-4a00-b9bb-29fc2c839373
+### Именение данных плательщика компании
+PUT http://localhost:1113/companies/5c93302c-21f2-4feb-ab8f-cb55cbfd68d5/payers
+Content-Type: application/json
+
+{
+    "id": "2e468a71-38bb-44a6-a499-8836dbd05cc5",
+    "name": "Suzuki"
+}
+### Получение списка всех менеджеров
+GET http://localhost:1113/managers
+### Назначение менеджера в компанию
+POST http://localhost:1113/managers/2592fe9c-0f84-4bfc-a6f3-185ccdfb4a14/companies/95d6f139-f4da-46dd-bb42-958b1824bace
+### Удаление менеджера из компании
+DELETE http://localhost:1113/managers/2592fe9c-0f84-4bfc-a6f3-185ccdfb4a14/companies/95d6f139-f4da-46dd-bb42-958b1824bace
+### Изменение данных менеджера
+PUT http://localhost:1113/managers
+Content-Type: application/json
+
+{
+    "id": "2592fe9c-0f84-4bfc-a6f3-185ccdfb4a14",
+    "name": "ジォッン"
+}
