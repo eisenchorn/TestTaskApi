@@ -4,7 +4,7 @@ using DataAccessLayer.Entities;
 
 namespace TestTaskApi.Dto
 {
-    public class ManagerDto
+    public class ManagerDto : ManagerBaseDto
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
